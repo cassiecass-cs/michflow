@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demostración de Componentes - UI</title>
+    <link rel="stylesheet" href="michflow.css">
+
+</head>
+<body>
+
+<main>
+    <!-- SECCIÓN 1: BOTONES -->
+    <div class="block-box">
+        <div class="block-8">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">1. Botones (Variants)</h2>
+                    <p class="card-subtitle">Variaciones de botones y estados</p>
+                </div>
+                <div class="card-body">
+                    <div class="button-group">
+                        <button class="button-primary">Primario</button>
+                        <button class="button-success">Success</button>
+                        <button class="button-alert">Alert</button>
+                        <button class="button-error">Error</button>
+                        <button class="button-disabled" disabled>Deshabilitado</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 2: INPUTS DE TEXTO Y ESTADOS -->
+    <div class="block-box">
+        <div class="block-4">
+            <div class="card card-hover">
+                <div class="card-header">
+                    <h2 class="card-title">Inputs Estándar</h2>
+                    <p class="card-subtitle">Text, Email, Password, etc.</p>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label class="input-label" for="txtNormal">Texto normal</label>
+                        <input type="text" id="txtNormal" class="input-field" placeholder="Escribe algo...">
+                        <p class="input-help">Información de ayuda genérica.</p>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label" for="txtSuccess">Texto Exitoso</label>
+                        <input type="text" id="txtSuccess" class="input-field input-success" value="Dato correcto">
+                        <p class="input-help input-help-success">¡Todo en orden!</p>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label" for="txtError">Texto con Error</label>
+                        <input type="text" id="txtError" class="input-field input-error" value="Valor inválido">
+                        <p class="input-help input-help-error">Campo obligatorio.</p>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label" for="txtDisabled">Deshabilitado</label>
+                        <input type="text" id="txtDisabled" class="input-field" disabled value="No editable">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block-4">
+            <div class="card card-hover">
+                <div class="card-header">
+                    <h2 class="card-title">Selects, Color y Textarea</h2>
+                    <p class="card-subtitle">Controles de selección y área de texto</p>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label class="input-label" for="miSelect">Lista Desplegable</label>
+                        <select id="miSelect" class="select-field">
+                            <option value="">Selecciona una opción</option>
+                            <option value="1">Opción Uno</option>
+                            <option value="2">Opción Dos</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label" for="miColor">Selector de Color</label>
+                        <input type="color" id="miColor" class="color-field" value="#2563eb">
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label" for="miTextarea">Área de Texto</label>
+                        <textarea id="miTextarea" class="textarea-field" placeholder="Escribe un comentario largo..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 3: CONTROLES (CHECKBOX, RADIO, SWITCH) Y SLIDERS -->
+    <div class="block-box">
+        <div class="block-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Controles de Activación</h2>
+                    <p class="card-subtitle">Checkbox, Radio y Switch</p>
+                </div>
+                <div class="card-body">
+                    <label class="control-label">
+                        <input type="checkbox" class="checkbox-field" checked>
+                        Casilla de verificación (Checked)
+                    </label>
+
+                    <label class="control-label">
+                        <input type="radio" name="grupoRadio" class="radio-field" checked>
+                        Opción Radio A
+                    </label>
+
+                    <label class="control-label">
+                        <input type="radio" name="grupoRadio" class="radio-field">
+                        Opción Radio B
+                    </label>
+
+                    <label class="control-label">
+                        <input type="checkbox" class="switch-field" checked>
+                        Interruptor (Switch) Activo
+                    </label>
+
+                    <label class="control-label">
+                        <input type="checkbox" class="checkbox-field" disabled>
+                        Control deshabilitado
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="block-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Archivos y Rangos</h2>
+                    <p class="card-subtitle">Input File e Input Range</p>
+                </div>
+                <div class="card-body">
+                    <div class="input-group">
+                        <label class="input-label" for="archivo">Subir Archivo</label>
+                        <input type="file" id="archivo" class="file-field">
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label" for="rangoNormal">Control Deslizador (Range)</label>
+                        <input type="range" id="rangoNormal" class="range-field" min="0" max="100" value="50">
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label" for="rangoExito">Deslizador Success</label>
+                        <input type="range" id="rangoExito" class="range-field range-success" min="0" max="100" value="80">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 4: FIELDSETS Y TARJETAS AVANZADAS -->
+    <div class="block-box">
+        <div class="block-8">
+            <fieldset class="fieldset-group fieldset-success">
+                <legend class="fieldset-legend">Fieldset Agrupado (Success State)</legend>
+                <div class="input-group">
+                    <label class="input-label" for="campoFieldset">Dato dentro de Fieldset</label>
+                    <input type="text" id="campoFieldset" class="input-field input-success" value="Información validada">
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="block-box">
+        
+        <div class="block-12">
+            
+            <!-- Contenedor flotante donde se apilarán los toasts -->
+<div class="toast-container">
+
+    <!-- Toast de Éxito -->
+    <div class="toast toast-success">
+        <div class="toast-content">
+            <h4 class="toast-title">¡Guardado exitoso!</h4>
+            <p class="toast-message">Tus cambios se han sincronizado correctamente.</p>
+        </div>
+        <button class="toast-close" aria-label="Cerrar">&times;</button>
+    </div>
+
+    <!-- Toast de Error -->
+    <div class="toast toast-error">
+        <div class="toast-content">
+            <h4 class="toast-title">Error de conexión</h4>
+            <p class="toast-message">No se pudo conectar con el servidor. Inténtalo de nuevo.</p>
+        </div>
+        <button class="toast-close" aria-label="Cerrar">&times;</button>
+    </div>
+
+    <!-- Toast de Alerta -->
+    <div class="toast toast-alert">
+        <div class="toast-content">
+            <h4 class="toast-title">Espacio bajo</h4>
+            <p class="toast-message">Queda poco almacenamiento local disponible.</p>
+        </div>
+        <button class="toast-close" aria-label="Cerrar">&times;</button>
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+</body>
+</html>
